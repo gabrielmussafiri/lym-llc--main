@@ -1135,4 +1135,67 @@ body {
 }
 
 /* Contact *
+/* Contact Section */
+.contact {
+  background-color: var(--mint-cream);
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.contact .container {
+  display: grid;
+  gap: 20px;
+}
+
+.contact .section-title {
+  font-size: var(--fs-4);
+  margin-block-end: 30px;
+}
+
+.contact-form form {
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-block: 20px 0;
+}
+
+.contact-form label {
+  font-weight: var(--fw-500);
+  font-size: var(--fs-6);
+  display: block;
+  margin-bottom: 5px;
+  color: var(--go-green);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--granite-gray);
+  border-radius: var(--radius-5);
+  font-size: var(--fs-10);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form .btn-primary {
+  background-color: var(--go-green);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: var(--radius-5);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  transition: var(--transition-1);
+}
+
+.contact-form .btn-primary:hover {
+  background-color: var(--rich-black-fogra-29-1);
+}
+
+/* You can add additional styling as needed */
 
