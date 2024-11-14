@@ -369,8 +369,53 @@
         </section>
 
         <!-- 
-        - #FEATURES
-      -->
+        - #WORK -->
+
+        <!-- 
+        <!- Client Logo Section -->
+        <section class="clients section" id="clients">
+          <div class="container">
+            <div class="section-title">
+              <h2 class="h2 section-title text-center">Our Trusted Clients</h2>
+            </div>
+
+            <div class="client-logo-grid">
+              <!-- Client 1 -->
+              <div class="client-logo">
+                <img
+                  src="https://lendin.netlify.app/assets/images/logo/logo.png"
+                  alt="Lending Ecofund Logo"
+                />
+              </div>
+
+              <!-- Client 2 -->
+              <div class="client-logo">
+                <img
+                  src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/455864224_8014509415305625_7306250318348008666_n.jpg?stp=dst-jpg_s552x414&_nc_cat=106&ccb=1-7&_nc_sid=50ad20&_nc_ohc=1JjuFUryuYIQ7kNvgFtUa5z&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=A5Xzv3QHXyOfn8aIy1PICdL&oh=00_AYAgtlu9Uk18HpiSmqcoqUsEA4UKI1LDANO7aRj7_k53Tw&oe=673BDB55"
+                  alt="International African Net"
+                />
+              </div>
+
+              <!-- Client 3 -->
+              <div class="client-logo">
+                <img
+                  src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/462483893_515167237947523_951060184800274704_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Kk1LsaDOUrEQ7kNvgH-Eh9u&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=AKsuJBmaNLGPrM0G98_HVc6&oh=00_AYCmAiGrhgtQB4B1BCn4eKP7FeXSG8NvZoDPPEkAqCZuNw&oe=673BCA91"
+                  alt="Its Elley Logo"
+                />
+              </div>
+              <div class="client-logo">
+                <img
+                  src="https://scontent-jnb2-1.xx.fbcdn.net/v/t39.30808-6/306353152_501035715359123_5128878297107527795_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=PGyUUscTqW4Q7kNvgHQQE2G&_nc_zt=23&_nc_ht=scontent-jnb2-1.xx&_nc_gid=AR0wTCgxMOvt2ZhQvnmJ261&oh=00_AYBYMaaX5F5n9WuAyS25Upu3cehms8HnPPTxrbPOGlVmJg&oe=673BE9A9"
+                  alt="Its Elley Logo"
+                />
+              </div>
+
+              <!-- Add more client logos as needed -->
+            </div>
+          </div>
+        </section>
+
+        <!-- #FEATURES -->
 
         <section class="section features" id="features" aria-label="features">
           <div class="container">
@@ -643,38 +688,62 @@
 
       <!-- Contact Section -->
 
-      <section class="contact" id="contact">
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
         <div class="container">
-          <div class="section-title">
-            <h2 class="h2 section-title text-center">Contact Us</h2>
-          </div>
-          <div class="contact-form">
-            <form action="#" method="post">
+          <h2 class="h2 section-title text-center">Get In Touch</h2>
+          <p class="section-subtitle text-center">Let's discuss your project</p>
+
+          <div class="contact-wrapper">
+            <form class="contact-form">
               <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
+                <input
+                  type="text"
+                  name="name"
                   required
-                ></textarea>
+                  class="form-control"
+                  placeholder=" "
+                />
+                <label>Your Name</label>
               </div>
 
               <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="form-control"
+                  placeholder=" "
+                />
+                <label>Your Email</label>
               </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="subject"
+                  required
+                  class="form-control"
+                  placeholder=" "
+                />
+                <label>Subject</label>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  required
+                  class="form-control"
+                  placeholder=" "
+                  rows="5"
+                ></textarea>
+                <label>Your Message</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn">
+                <span>Send Message</span>
+                <ion-icon name="paper-plane-outline"></ion-icon>
+              </button>
             </form>
           </div>
         </div>
@@ -689,11 +758,10 @@
       <div class="footer-top section">
         <div class="container">
           <div class="footer-brand">
-            <a href="#" class="logo">Lym LLC</a>
+            <a href="#" class="logo">Lygm Group</a>
 
             <p class="footer-text">
-              Lorem ipsum dolor sit amet consecte tur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore.
+              Transforming Ideas into Impactful Solutions
             </p>
 
             <form action="" class="newsletter-form">
@@ -717,57 +785,38 @@
             </li>
 
             <li>
-              <a href="#" class="footer-link">Strategy & Research</a>
+              <a href="#services" class="footer-link"
+                >Cybersecurity & Compliance</a
+              >
             </li>
 
             <li>
-              <a href="#" class="footer-link">Web Development</a>
+              <a href="#services" class="footer-link"
+                >Scalable IT Infrastructure</a
+              >
             </li>
 
             <li>
-              <a href="#" class="footer-link">Web Solution</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">Digital Merketing</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">App Design</a>
-            </li>
-
-            <li>
-              <a href="#" class="footer-link">App Development</a>
+              <a href="#services" class="footer-link"
+                >Web & Mobile App Development</a
+              >
             </li>
           </ul>
 
           <ul class="footer-list">
-            <!-- <li>
-            <p class="footer-list-title">Company</p>
-          </li> -->
-
             <li>
-              <a href="#about" class="footer-link">About Company</a>
+              <p class="footer-list-title">Our Clients</p>
             </li>
 
             <li>
-              <a href="#services" class="footer-link">Our Services</a>
+              <a href="#" class="footer-link">Lendind Ecofund</a>
             </li>
 
-            <!-- <li>
-            <a href="#" class="footer-link">Our Portfolio</a>
-          </li> -->
-
-            <!-- <li>
-            <a href="#" class="footer-link">Our Blog</a>
-          </li> -->
-
-            <!-- <li>
-            <a href="#" class="footer-link">Latest News</a>
-          </li> -->
-
             <li>
-              <a href="#contact" class="footer-link">Contact Us</a>
+              <a href="#" class="footer-link">LDA Management</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Its Elley</a>
             </li>
           </ul>
 
@@ -780,7 +829,7 @@
               <ion-icon name="location" aria-hidden="true"></ion-icon>
 
               <address class="contact-link address">
-                4517 Texas Ave. USA,
+                cnr Brand & Swart Road , President Park Midrand, RSA
               </address>
             </li>
 
@@ -788,7 +837,7 @@
               <ion-icon name="call" aria-hidden="true"></ion-icon>
 
               <a href="tel:+7894631546876" class="contact-link"
-                >+1894631546876</a
+                >+27(60)12-14-105</a
               >
             </li>
 
@@ -796,7 +845,7 @@
               <ion-icon name="mail" aria-hidden="true"></ion-icon>
 
               <a href="mailto:info@lymllc.com" class="contact-link"
-                >info@lymllcx.com</a
+                >supporto@lygmgroup.co.za</a
               >
             </li>
 
@@ -834,8 +883,8 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="copyright">
-            &copy; 2023 LYM LLC| All Rights Reserved by
-            <a href="https://www.lygm-group.com" class="copyright-link"
+            &copy; 2024 LYGM GROUP All Rights Reserved by
+            <a href="https://www.lygmgroup.co.za" class="copyright-link"
               >LygmDev</a
             >
           </p>
