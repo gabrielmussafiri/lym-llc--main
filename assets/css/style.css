@@ -1520,6 +1520,18 @@ textarea.form-control {
   border-radius:  13px 13px 3px 13px ;
 
 }
+.chat-body .bot-message .thinking-indicator{
+  display: flex;
+  gap:4px;
+  padding-block: 15px;
+}
+
+.chat-body .bot-message .thinking-indicator .dot{
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background:var(--go-green) ;
+}
 
 .chat-footer{
   position:absolute;
