@@ -1539,7 +1539,7 @@ textarea.form-control {
   opacity: 0.7;
   border-radius: 50%;
   background:var(--go-green) ;
-  /* animation: dotPulse 1.8s ease-in-out infinite; */
+  animation: dotPulse 1.8s ease-in-out infinite;
 
 }
 
