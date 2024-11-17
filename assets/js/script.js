@@ -124,7 +124,7 @@ const handleOutgoingMessage =(e) =>{
 
             </div>
           </div>`;
-  const incomingMessageDiv = createMessageElement(messageContent, "bot-message" );
+  const incomingMessageDiv = createMessageElement(messageContent, "bot-message", "thinking");
   // incomingMessageDiv.querySelector(".message-text").textContent = userData.message;
  
   chatBody.appendChild(incomingMessageDiv);
