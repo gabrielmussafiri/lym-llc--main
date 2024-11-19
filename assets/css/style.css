@@ -300,17 +300,20 @@ body {
   #HEADER
 \*-----------------------------------*/
 
-.header .btn-outline {
-  display: none;
-}
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.header .btn-outline { display: none; }
 
 .header {
-  padding-block: 15px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  padding-block: 20px;
   z-index: 4;
+  transition: var(--transition-1);
 }
 
 .header.active {
@@ -359,9 +362,7 @@ body {
 }
 
 .navbar .logo,
-.nav-close-btn {
-  color: var(--white);
-}
+.nav-close-btn { color: var(--white); }
 
 .navbar .wrapper {
   display: flex;
@@ -370,18 +371,14 @@ body {
   margin-block-end: 25px;
 }
 
-.nav-close-btn {
-  font-size: 30px;
-}
+.nav-close-btn { font-size: 30px; }
 
 .navbar-link {
   padding-block: 10px;
   transition: var(--transition-1);
 }
 
-.navbar-link:is(:hover, :focus) {
-  color: var(--go-green);
-}
+.navbar-link:is(:hover, :focus) { color: var(--go-green); }
 
 .overlay {
   position: fixed;
@@ -397,6 +394,7 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
 
 /*-----------------------------------*\
   #HERO

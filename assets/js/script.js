@@ -249,8 +249,7 @@ const generateBotResponse = async (incomingMessageDiv) => {
   }
 };
 
-// Handle outgoing user messages 
-// Handle outgoing user messages 
+
 // Handle outgoing user messages 
 const handleOutgoingMessage = (e) => {
   e.preventDefault();
@@ -293,6 +292,16 @@ const handleOutgoingMessage = (e) => {
 
 
 // Event Listeners
+
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 100) {
+      header.classList.add('active');
+  } else {
+      header.classList.remove('active');
+  }
+});
+
 messageInput.addEventListener("keydown", (e) => {
   const userMessage = e.target.value.trim();
   if (e.key === "Enter" && userMessage && !e.shiftKey && window.innerWidth > 768) {
