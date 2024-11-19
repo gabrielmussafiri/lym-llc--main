@@ -1403,15 +1403,45 @@ textarea.form-control {
 
 } */
 
+#chatbot-toggler{
+  position : fixed;
+  bottom: 30px;
+  right: 35px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  background: var(--go-green);
+
+
+}
+#chatbot-toggler span{
+  color: #fff;
+  position: absolute;
+
+}
+
+#chatbot-toggler span:last-child{
+  opacity:0;
+}
 
 .chatbot-popup{
 
-  position:relative;
+  position:fixed;
+  right: 35px;
+  bottom: 90px;
   width: 420px;
   background:#fff; 
   overflow: hidden;
   border-radius: 15px;
+  opacity: 0;
+  pointer-events: none;
   box-shadow: 0 0 128px rgba(0,0,0.1) 0 32px 64px -48px rgba(0 ,0,0,0.5);
+
 
 
 } 
@@ -1479,8 +1509,9 @@ textarea.form-control {
   margin-bottom: 82px;
   overflow-y: auto;
   flex-direction: column;
+  scrollbar-color:#ccccf5 transparent;
 
-}
+} 
 
 .chat-body .message{
   display: flex;
