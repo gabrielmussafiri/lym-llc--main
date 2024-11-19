@@ -156,6 +156,9 @@ const generateBotResponse = async (incomingMessageDiv) =>{
   e.preventDefault();
    userData.message = messageInput.value.trim();
    messageInput.value = "";
+  //  fileUploadWrapper.classList.remove("");
+   messageInput.dispatchEvent(new Event("input"));
+
 
 
   // Create and display user message
@@ -198,7 +201,7 @@ const generateBotResponse = async (incomingMessageDiv) =>{
 
 messageInput.addEventListener("keydown", (e)=>{
   const userMessage = e.target.value.trim();
-  if(e.key ==="Enter" && userMessage){
+  if(e.key ==="Enter" && userMessage && !e.shiftKey && window.innerWidth > 768) {
     handleOutgoingMessage(e);
   }
 });
