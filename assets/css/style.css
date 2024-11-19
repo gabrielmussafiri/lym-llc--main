@@ -1440,24 +1440,22 @@ body.show-chatbot #chatbot-toggler span:last-child{
   opacity: 1;
 }
 
-.chatbot-popup{
-
-  position:fixed;
+.chatbot-popup {
+  position: fixed;
   right: 35px;
   bottom: 80px;
   width: 420px;
-  background:#fff; 
-  overflow: hidden;
+  background: #fff;
   border-radius: 15px;
   opacity: 0;
   transform: scale(0.2);
-  transform-origin: bottom right ;
+  transform-origin: bottom right;
   pointer-events: none;
   box-shadow: 0 0 128px rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease;
   z-index: 1000;
-
-} 
+  max-height: 600px; /* Limit height on larger screens */
+}
 
 .show-chatbot .chatbot-popup{
   opacity: 1;
@@ -1711,7 +1709,7 @@ body.show-chatbot #chatbot-toggler span:last-child{
 
 /* Responsive media query for mobile screens */
 
-@media (max-width: 520px){
+/* @media (max-width: 520px){
   #chatbot-toggler{
     right: 20px;
     bottom: 20px;
@@ -1739,4 +1737,217 @@ body.show-chatbot #chatbot-toggler span:last-child{
 
 
 
+} */
+
+/* Base styles for mobile first approach */
+:root {
+  --fs-1: 4rem;
+  --fs-4: 2.5rem;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  :root {
+    --fs-1: 5.5rem;
+    --fs-4: 3rem;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+  
+  .contact-wrapper {
+    padding: 30px;
+    margin: 30px auto;
+  }
+}
+
+/* Desktop (992px and up) */
+@media (min-width: 992px) {
+  :root {
+    --fs-1: 6.5rem;
+    --fs-4: 3.5rem;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  :root {
+    --fs-1: 7.5rem;
+    --fs-4: 3.8rem;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Additional responsive utilities */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Responsive grid system */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Contact form responsive improvements */
+.contact-section {
+  padding: 50px 15px;
+}
+
+@media (max-width: 576px) {
+  .contact-wrapper {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .form-control {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}
+
+/* Improve chatbot responsiveness */
+@media (max-width: 480px) {
+  .chatbot-popup {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .chat-body {
+    height: 400px;
+  }
+}
+
+/* Responsive flexbox utilities */
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .flex-column-mobile {
+    flex-direction: column;
+  }
+  
+  .text-center-mobile {
+    text-align: center;
+  }
+}
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 520px) {
+  .chatbot-popup {
+    width: 90%; /* Take up most but not all of the width */
+    height: 80vh; /* Take up most but not all of the height */
+    right: 5%;
+    left: 5%;
+    bottom: 70px; /* Leave space at the bottom */
+    max-height: 600px;
+    border-radius: 15px;
+  }
+
+  .chat-body {
+    height: calc(100% - 140px);
+    margin-bottom: 70px;
+    padding: 15px;
+  }
+
+  .chat-header {
+    padding: 12px 15px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .chat-footer {
+    position: absolute; /* Changed from fixed */
+    bottom: 0;
+    padding: 10px 15px;
+    background: #fff;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+  }
+
+  #chatbot-toggler {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 521px) and (max-width: 768px) {
+  .chatbot-popup {
+    width: 380px;
+    max-height: 600px;
+    right: 20px;
+    bottom: 100px;
+  }
+
+  .chat-body {
+    height: calc(100% - 140px);
+  }
+}
+
+/* Ensure the close button is always visible and clickable */
+.chat-header #close-chatbot {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Show chatbot animation */
+.show-chatbot .chatbot-popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
 }
