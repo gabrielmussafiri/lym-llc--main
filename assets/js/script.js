@@ -77,6 +77,7 @@ const chatBody = document.querySelector(".chat-body");
 const messageInput = document.querySelector(".message-input");
 const sendMessageButton = document.querySelector("#send-message");
 const chatbotToggler = document.querySelector("#chatbot-toggler")
+const closeChatbot = document.querySelector("#close-chatbot")
 
 // API Setup
 
@@ -85,9 +86,14 @@ const API_URL =`https://generativelanguage.googleapis.com/v1beta/models/gemini-1
 
 
 const userData = {
-  message : null
+  message : null,
+  file:{
+    data:null,
+    mime_type:null,
+  }
 
 }
+const initialInputHeight = messageInput.scrollHeight;
 
 
 // Create message element with dynamic classes and return it
@@ -197,10 +203,20 @@ messageInput.addEventListener("keydown", (e)=>{
   }
 });
 
+// Adjust input field height dynamically
+
+messageInput.addEventListener("input",()=>{
+const initialInputHeight = messageInput.scrollHeight;
+  messageInput.style.height = `${initialInputHeight}px`;
+  messageInput.style.height = `${messageInput.scrollHeight}px`;
+  document.querySelector(".chat-form").style.borderRadius= messageInput.scrollHeight > initialInputHeight ? "15px":"32px"; 
+
+})
+
 sendMessageButton.addEventListener("click", (e)=> handleOutgoingMessage(e))
 
 chatbotToggler.addEventListener('click',() =>document.body.classList.toggle('show-chatbot'))
 
-
+closeChatbot.addEventListener("click",() =>document.body.classList.remove('show-chatbot'))
 
 
